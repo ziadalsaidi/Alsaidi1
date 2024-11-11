@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دفع عربون معرض الصعيدي</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            direction: rtl;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+        .container {
+            width: 60%;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        .payment-form {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .payment-form label {
+            margin: 10px 0 5px;
+            font-size: 16px;
+            color: #333;
+        }
+        .payment-form input, .payment-form select {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .payment-form button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        .payment-form button:hover {
+            background-color: #45a049;
+        }
+        .payment-options {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+        .payment-options strong {
+            font-size: 20px;
+            color: #e67e22;
+        }
+        .instructions {
+            background-color: #fffae6;
+            padding: 15px;
+            margin-top: 30px;
+            border-radius: 5px;
+            color: #e67300;
+            font-size: 14px;
+        }
+        .footer {
+            margin-top: 40px;
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>دفع عربون معرض الصعيدي</h1>
+        <p>لإتمام عملية الدفع، يرجى تحويل المبلغ عبر فودافون كاش إلى الرقم التالي:</p>
+
+        <div class="payment-options">
+            <p><strong>رقم محفظة فودافون كاش:</strong> <strong>01032092547</strong></p>
+        </div>
+
+        <div class="payment-form">
+            <h2>يرجى تعبئة بياناتك:</h2>
+            <form action="process_payment.php" method="POST">
+                <label for="full-name">الاسم بالكامل:</label>
+                <input type="text" id="full-name" name="full_name" required>
+
+                <label for="transaction-id">الرقم الذي تم منه التحويل:</label>
+                <input type="text" id="transaction-id" name="transaction_id" required>
+
+                <label for="car-type">نوع السيارة:</label>
+                <select id="car-type" name="car_type" required>
+                    <option value="سيارة ركوب">سيارة ركوب</option>
+                    <option value="سيارة نقل">سيارة نقل</option>
+                    <option value="سيارة رياضية">سيارة رياضية</option>
+                    <option value="سيارة أخرى">سيارة أخرى</option>
+                </select>
+
+                <button type="submit">إرسال البيانات</button>
+            </form>
+        </div>
+
+        <div class="instructions">
+            <p>يرجى تصوير الوصل لضمان حقك في حال حدوث أي مشاكل في الدفع.</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>حقوق الطبع والنشر &copy; 2024 معرض الصعيدي. جميع الحقوق محفوظة.</p>
+    </div>
+
+</body>
+</html>
